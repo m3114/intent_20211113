@@ -15,6 +15,12 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this, ActivityToother::class.java)
             startActivity(myIntent)
 
+            btnsendMassge.setOnClickListener {
+                val inputMessge = Intent(this, ViewActivity::class.java)
+                myIntent.putExtra("massage",inputMessge)
+                startActivity(myIntent)
+            }
+
         }
     }
 }

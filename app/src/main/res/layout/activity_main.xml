@@ -23,11 +23,13 @@
         android:text="다른 화면으로 이동"/>
 
     <EditText
+        android:id="@+id/edtMassage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="아무 아이디 입력"/>
 
-    <EditText
+    <Button
+        android:id="@+id/btnsendMassge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="문구를 전송하는 버튼"/>
