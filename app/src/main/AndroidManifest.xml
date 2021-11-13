@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Intent_20211113">
         <activity
+            android:name=".ViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityToother"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

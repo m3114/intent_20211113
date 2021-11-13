@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:gravity="center"
+
     tools:context=".MainActivity">
 
     <TextView
@@ -19,7 +20,19 @@
         android:id="@+id/btnMoveToother"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="다른 화며능로 이동"/>
+        android:text="다른 화면으로 이동"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아무 아이디 입력"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문구를 전송하는 버튼"/>
+
+
 
 
 
