@@ -9,6 +9,7 @@
     tools:context=".ViewActivity">
 
     <TextView
+        android:id="@+id/txtMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="메인화면으로 보낸 문구를 표시할자리"
