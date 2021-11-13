@@ -16,19 +16,22 @@ class MainActivity : AppCompatActivity() {
 
             val myIntent = Intent(this, ActivityToother::class.java)
             startActivity(myIntent)
+        }
 
-            btnsendMassge.setOnClickListener {
-                val inputMessge = Intent(this, ViewActivity::class.java)
-                myIntent.putExtra("massage",inputMessge)
-                startActivity(myIntent)
-            }
+        btnsendMassge.setOnClickListener {
+           val inputMessge = edtMassage.text.toString()
+           val myIntent = Intent(this, ViewActivity::class.java)
+           myIntent.putExtra("message",inputMessge)
+           startActivity(myIntent)
+        }
 
-            btnEditNicname.setOnClickListener {
-                val myIntent = Intent(this,EditNicnameActivity::class.java)
+        btnEditNicname.setOnClickListener {
+            val myIntent = Intent(this,EditNicnameActivity::class.java)
+            startActivityForResult(myIntent, REQ_FOR_NICNAME)
 
-                startActivityForResult(myIntent, REQ_FOR_NICNAME)
+
+
             }
 
         }
     }
-}
