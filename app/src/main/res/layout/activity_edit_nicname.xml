@@ -15,15 +15,17 @@
         android:text="닉네임 입력"/>
 
     <EditText
+        android:id="@+id/entNickName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="사용할 닉네임 입력"
         android:singleLine="true"/>
 
     <Button
+        android:id="@+id/bntNickName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text="확인"/>
 
 
 </LinearLayout>
