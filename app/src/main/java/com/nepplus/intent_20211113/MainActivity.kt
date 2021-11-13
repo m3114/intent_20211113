@@ -6,6 +6,8 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+//    멤버변수
+    val REQ_FOR_NICNAME = 1000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,6 +21,12 @@ class MainActivity : AppCompatActivity() {
                 val inputMessge = Intent(this, ViewActivity::class.java)
                 myIntent.putExtra("massage",inputMessge)
                 startActivity(myIntent)
+            }
+
+            btnEditNicname.setOnClickListener {
+                val myIntent = Intent(this,EditNicnameActivity::class.java)
+
+                startActivityForResult(myIntent, REQ_FOR_NICNAME)
             }
 
         }
