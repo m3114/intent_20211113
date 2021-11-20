@@ -1,6 +1,7 @@
 package com.nepplus.intent_20211113
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -12,7 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnDial.setOnClickListener {  }
+        btnDial.setOnClickListener {
+            val inputPhoneNum = edtPhoneNum.text.toString()
+//            그 전화번호에 실제 전화연결
+            val myUri = Uri.parse("tel:01011112222")
+            val myIntent = intent(Intent.ACTION_DIAL,myUri)
+            startActivity(myIntent)
+
+        }
 //입력한 전화번호. 추출(변수에 저장
 //        그 전화번호에 실제 전화걸기(dial)
         btnMoveToother.setOnClickListener {
@@ -49,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 //             data : 이전 화면에서 담아둔 resultintent를 들고 있는 역할
                 val newNickname = data?.getStringArrayExtra("nick")
 
-                txtNickname.text = newNickname
+               txtNickname.text = newNickname
 
             }
     }
