@@ -13,6 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnKakaoStoreLink.setOnClickListener {
+            val myUri = Uri.parse("https://accounts.kakao.com/login/kakaostory")
+            val myIntent = Intent(Intent.ACTION_VIEW,myUri)
+            startActivity(myIntent)
+        }
+
         btnNaverWebLink.setOnClickListener {
             val myUri = Uri.parse("https://www.naver.com/")
             val myIntent = Intent(Intent.ACTION_VIEW,myUri)
