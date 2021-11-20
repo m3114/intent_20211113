@@ -124,6 +124,13 @@
         android:layout_height="wrap_content"
         android:text="문자보내리(SENDTO)"/>
 
+    <Button
+        android:id="@+id/btnNaverWebLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자보내리(VIEW)"/>
+
+
 
 
 

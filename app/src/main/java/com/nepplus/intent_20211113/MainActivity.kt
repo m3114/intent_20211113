@@ -13,6 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnNaverWebLink.setOnClickListener {
+            val myUri = Uri.parse("https://www.naver.com/")
+            val myIntent = Intent(Intent.ACTION_VIEW,myUri)
+            startActivity(myIntent)
+        }
+
         btnSms.setOnClickListener {
             val inputPhoneNum = edtPhoneNum.text.toString()
 //            그 전화번호에 실제 전화연결
