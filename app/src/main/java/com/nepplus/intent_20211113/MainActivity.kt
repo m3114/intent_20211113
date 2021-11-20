@@ -17,7 +17,16 @@ class MainActivity : AppCompatActivity() {
             val inputPhoneNum = edtPhoneNum.text.toString()
 //            그 전화번호에 실제 전화연결
             val myUri = Uri.parse("tel:${inputPhoneNum}")
-            val myIntent = intent(Intent.ACTION_DIAL,myUri)
+            val myIntent = Intent(Intent.ACTION_CALL,myUri)
+            startActivity(myIntent)
+
+        }
+
+        btnDial.setOnClickListener {
+            val inputPhoneNum = edtPhoneNum.text.toString()
+//            그 전화번호에 실제 전화연결
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+            val myIntent = Intent(Intent.ACTION_DIAL,myUri)
             startActivity(myIntent)
 
         }
@@ -36,7 +45,7 @@ class MainActivity : AppCompatActivity() {
            startActivity(myIntent)
         }
 
-        btnEditNicname.setOnClickListener {
+        btnEditNickname.setOnClickListener {
             val myIntent = Intent(this,EditNicnameActivity::class.java)
             startActivityForResult(myIntent, REQ_FOR_NICNAME)
 
@@ -55,9 +64,10 @@ class MainActivity : AppCompatActivity() {
             if(resultCode == RESULT_OK){
 //                닉네임을 가지러 가서 - 확인도 누르게 맞을때 실행되는 코드
 //             data : 이전 화면에서 담아둔 resultintent를 들고 있는 역할
-                val newNickname = data?.getStringArrayExtra("nick")
+                val newNickname = data?.getStringExtra("nick")
 
                txtNickname.text = newNickname
+
 
             }
     }

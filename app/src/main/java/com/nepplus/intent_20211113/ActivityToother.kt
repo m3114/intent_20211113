@@ -20,16 +20,16 @@ class ActivityToother : AppCompatActivity() {
 
 
 
-//            val myintent = Intent(this.EditNicnameActivity::class.java)
+//            val myintent = Intent(this.EditNicknameActivity::class.java)
 
 //            finish()
 
 
         }
-//        btnEditNicname.setOnClickListener {
-//            val myintent = Intent(this,editnicnameActivity::class.java)
-
-
+//        bntRetrunNickname.setOnClickListener {
+//            val myintent = Intent(this,entnicknameActivity::class.java)
+//
+//
 //            finish()
 
         }
