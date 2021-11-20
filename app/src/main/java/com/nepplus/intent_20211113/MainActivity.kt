@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         btnDial.setOnClickListener {
             val inputPhoneNum = edtPhoneNum.text.toString()
 //            그 전화번호에 실제 전화연결
-            val myUri = Uri.parse("tel:01011112222")
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
             val myIntent = intent(Intent.ACTION_DIAL,myUri)
             startActivity(myIntent)
 
